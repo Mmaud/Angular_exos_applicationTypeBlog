@@ -1,7 +1,7 @@
 // deux types de type possibles (class ou interface)
 // dans les params du constructeurs je choisis de ne mettre que le titre et le contenu
-// sachant que la date constitue la date de création du poste
-// et le nombre de likes/unlikes est à 0 à la création du poste
+// sachant que la date constitue la date de crï¿½ation du poste
+// et le nombre de likes/unlikes est ï¿½ 0 ï¿½ la crï¿½ation du poste
 
 /*export default interface Post {
   title: string,
@@ -16,10 +16,11 @@ export default class Post {
     loveIts: number;
     created_at: Date;
 
-    constructor(title, content) {
-        this.title = title;
-        this.content = content;
-        this.loveIts = 0;
-        this.created_at = new Date();
+    constructor(title:string , content:string) {
+      this.title = title;
+      this.content = content;
+      this.loveIts = 0;
+     //@TODO this.created_at = Date.now();
+
     }
 }

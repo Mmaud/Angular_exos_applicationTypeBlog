@@ -1,4 +1,9 @@
-<ul class="list-group">
-    <app-post-list-item-component *ngFor="let onePost of posts" [post]="onePost">
-    </app-post-list-item-component>
-</ul>
+<div>
+    <h2>Vos posts</h2>
+    <h3 *ngIf='this.posts.length===0'>Commencez par créer un nouveau post</h3>
+    <ul> 
+            <app-post-list-item-component
+            *ngFor="let post of posts"
+            [post]="post"></app-post-list-item-component>
+    </ul>
+</div>

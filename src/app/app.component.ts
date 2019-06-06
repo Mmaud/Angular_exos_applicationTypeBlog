@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import Post from '../Models/Post';
+import * as firebase from 'firebase';
 
 @Component({
     selector: 'app-root',
@@ -10,6 +11,19 @@ import Post from '../Models/Post';
 
 export class AppComponent {
     title = 'TP_Application de type blog';
+    constructor() {
+        var firebaseConfig = {
+            apiKey: "AIzaSyDDVwXcTuh7Y3d0HfIFjy9KuqtfJ-USEZ8",
+            authDomain: "ocangularexoblog.firebaseapp.com",
+            databaseURL: "https://ocangularexoblog.firebaseio.com",
+            projectId: "ocangularexoblog",
+            storageBucket: "ocangularexoblog.appspot.com",
+            messagingSenderId: "477842756408",
+            appId: "1:477842756408:web:082e1b828d70d0d2"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+    }
 
     // je déclare mes posts à afficher partir de mon type Post (cf models/post)
     // je choisi les différentes manières de faire pour pouvoir m'en souvenir un jour
